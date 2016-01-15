@@ -22,7 +22,7 @@ class GoogleAuthenticatorTest extends PHPUnit_Framework_TestCase {
 
     public function testItCanBeInstantiated()
     {
-        $ga = new GoogleAuthenticator();
+        $ga = new \PHPGangsta\GoogleAuthenticator();
         $this->assertInstanceOf('\PHPGangsta\GoogleAuthenticator', $ga);
     }
 
