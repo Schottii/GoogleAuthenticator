@@ -14,9 +14,9 @@
     ],
 	"autoload": {
       "psr-4": {
-        "Ares\\": "./PHPGangsta/"
+        "Ares\\": "./PHPGangsta"
       }
-    },
+    }
 }
 
 
