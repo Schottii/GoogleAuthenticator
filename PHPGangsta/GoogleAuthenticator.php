@@ -1,15 +1,17 @@
 <?php
 
+namespace PHPGangsta\GoogleAuthenticator;
+
 /**
  * PHP Class for handling Google Authenticator 2-factor authentication
  *
- * @author Michael Kliewe
+ * @author Michael Kliewe, Marc Schottstädt
  * @copyright 2012 Michael Kliewe
  * @license http://www.opensource.org/licenses/bsd-license.php BSD License
  * @link http://www.phpgangsta.de/
  */
 
-class PHPGangsta_GoogleAuthenticator
+class GoogleAuthenticator
 {
     protected $_codeLength = 6;
 
@@ -27,7 +29,8 @@ class PHPGangsta_GoogleAuthenticator
 
         $secret = '';
         for ($i = 0; $i < $secretLength; $i++) {
-            $secret .= $validChars[array_rand($validChars)];
+            $index = mt_rand(0, count($validChars)-1);
+            $secret .= $validChars[$index];
         }
         return $secret;
     }
